@@ -1,0 +1,72 @@
+<div class="content">
+  <div class="shape-info">
+    <div *ngIf="shape === 'Cylinder'">
+      <div
+        class="cylinder"
+        [style.--bottom-color]="containerBottom"
+        [style.--top-border]="topBorder"
+        [style.--top-color]="topContent"
+      >
+        <div class="cylinder-content" #cylinderLevel></div>
+      </div>
+      <span class="text">{{ level.toFixed(2) }} mm</span>
+    </div>
+
+    <div *ngIf="shape === 'Rectangle'">
+      <div class="rectangle" [style.--bottom-color]="containerBottom">
+        <div class="rectangle-content" #rectangleLevel></div>
+      </div>
+      <span class="text">{{ level.toFixed(2) }} mm</span>
+    </div>
+
+    <div *ngIf="shape === 'Circle'">
+      <div class="circle" [style.--bottom-color]="containerBottom">
+        <div class="circle-content" #circleLevel></div>
+      </div>
+      <span class="text">{{ level.toFixed(2) }} mm</span>
+    </div>
+
+    <div *ngIf="shape === 'ConeTop'">
+      <div class="cone" [style.--bottom-color]="containerBottom">
+        <div class="top-cone">
+          <div class="cone-content-bottom" #coneTopLevelTop></div>
+        </div>
+        <div class="cone-top-bottom"></div>
+        <div class="cone-content" #coneTopLevel>
+          <div class="cone-content-top-bottom" #coneTopLevelBottom></div>
+        </div>
+      </div>
+      <span class="text">{{ level.toFixed(2) }} mm</span>
+    </div>
+
+    <div *ngIf="shape === 'ConeBottom'">
+      <div class="cone-bottom-top"></div>
+      <div class="cone-bottom">
+        <div class="cone-content-bottom" #coneBottomLevelBottom></div>
+      </div>
+      <div class="cone-content" #coneBottomLevel>
+        <div class="cone-content-top" #coneBottomLevelTop></div>
+      </div>
+      <span class="text">{{ level.toFixed(2) }} mm</span>
+    </div>
+
+    <div
+      class="caliberation"
+      [ngClass]="{ 'caliberation-cir': shape === 'Circle' }"
+    >
+      <div
+        [ngClass]="{
+          'scale-rect': shape === 'Rectangle',
+          'scale-cir': shape === 'Circle',
+          'scale-cyl': shape === 'Cylinder',
+          'scale-ct': shape === 'ConeTop',
+          'scale-cb': shape === 'ConeBottom'
+        }"
+        *ngFor="let scale of scales"
+      >
+        <!-- <span class="indicator"></span> -->
+        - {{ scale }} mm
+      </div>
+    </div>
+  </div>
+</div>

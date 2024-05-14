@@ -1,0 +1,8 @@
+<div>
+  <ion-card [style.background]="getColor()" (click)="navigateTo(title)">
+    <ion-card-header>
+      <img [src]="cardImg" [alt]="returnAlt(title)" />
+      <p class="title">{{ title }}</p>
+    </ion-card-header>
+  </ion-card>
+</div>

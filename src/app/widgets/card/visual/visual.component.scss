@@ -1,0 +1,38 @@
+.deviceContainer{
+  color: #000000;
+  width:100%;
+  padding:0.7em 1.5em;
+}
+
+.textColor{
+  color:#10032D;
+}
+
+.deviceContent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:2px;
+  margin-top:5px;
+  background-color: #d8d3e4;
+  border-radius: 10px;
+}
+
+
+.mainText{
+  font-weight: bold;
+  font-size: 17px;
+  margin:0px;
+  padding:10px 5px;
+}
+
+.subText{
+  color:#10032D;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.container{
+  height:300px;
+  width:100%;
+}

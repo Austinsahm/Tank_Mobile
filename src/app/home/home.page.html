@@ -1,0 +1,101 @@
+<app-header></app-header>
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <div class="background">
+    <ng-container>
+      <ng-container *ngIf="tanksAsset$ | progress | async as tank">
+        <ion-grid style="margin-left: 5px; margin-right: 5px">
+          <ion-row>
+            <ion-col>
+              <ion-card
+                *ngFor="let dataSource of tank.value; let i = index"
+                style="margin-top: 0px"
+              >
+                <ion-card-header
+                  style="
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                  "
+                >
+                  <ion-grid>
+                    <ion-row>
+                      <ion-col size="10" style="display: flex"
+                        ><ion-card-title
+                          style="align-self: center; font-size: 20px"
+                          >{{dataSource.title}}</ion-card-title
+                        ></ion-col
+                      >
+                      <ion-col size="2" style="padding: 0px">
+                        <div>
+                          <ion-button
+                            slot="end"
+                            routerLink="../{{dataSource.tankId}}/details/landing"
+                            fill="clear"
+                            class="detailsBtn"
+                          >
+                            <!-- <ion-icon
+                              id="open-modal"
+                              name="ellipsis-vertical-sharp"
+                              size="medium"
+                              color="primary"
+                            ></ion-icon> -->
+                            <ion-icon
+                              id="open-modal"
+                              size="medium"
+                              name="ellipsis-horizontal-outline"
+                            ></ion-icon
+                          ></ion-button>
+                        </div>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+
+                  <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+                </ion-card-header>
+
+                <ion-card-content style="padding-bottom: 0px">
+                  <div class="ion-text-center">
+                    <app-tank
+                      [shape]="dataSource.shape"
+                      [maxSize]="dataSource.max"
+                      [level]="dataSource.level"
+                      [deviceIndex]="i"
+                      [color]="dataSource.color"
+                      [title]="dataSource.title"
+                      [tankId]="dataSource.tankId"
+                    ></app-tank>
+                    <!-- <div #fusion></div> -->
+
+                    <!-- <fusioncharts
+                      width="350"
+                      height="300"
+                      type="Cylinder"
+                      [dataSource]="dataSource"
+                      (rendered)="animation($event)"
+                    ></fusioncharts> -->
+
+                    <!-- custom chart -->
+                  </div>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ng-container>
+      <!-- <ng-container *ngIf="tanksAsset$ | progress | async as tank">
+        <fusioncharts *ngIf="tank.value"
+        width="350"
+        height="400"
+        type="Cylinder"
+        [dataSource]="dataSources[0]"
+        (rendered)="animation($event)"
+      ></fusioncharts>
+    </ng-container> -->
+    </ng-container>
+  </div>
+</ion-content>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "699069330275",
+    "project_id": "datanucleusinc-tank",
+    "storage_bucket": "datanucleusinc-tank.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:699069330275:android:1b77179a84a4fa92061956",
+        "android_client_info": {
+          "package_name": "com.datanucleus.tank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "699069330275-ohl1aembkdjni9qtaak2jobt00qlpd39.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOFT2ioY3IrufVrfofF4w2NMBoEYm1e1A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "699069330275-ohl1aembkdjni9qtaak2jobt00qlpd39.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

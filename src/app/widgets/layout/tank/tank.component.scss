@@ -1,0 +1,362 @@
+.cylinder {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 6px;
+  width: 100px;
+  height: 300px;
+  border: 2px solid #d6d6d6;
+  border-radius: 125px/25px;
+  background-image: linear-gradient(
+    90deg,
+    hsl(0deg 0% 92%) 0%,
+    hsl(344deg 0% 93%) 8%,
+    hsl(344deg 0% 95%) 17%,
+    hsl(0deg 0% 97%) 25%,
+    hsl(344deg 0% 97%) 33%,
+    hsl(344deg 0% 98%) 42%,
+    hsl(0deg 0% 98%) 50%,
+    hsl(344deg 0% 96%) 58%,
+    hsl(344deg 0% 94%) 67%,
+    hsl(0deg 0% 93%) 75%,
+    hsl(344deg 0% 95%) 83%,
+    hsl(344deg 0% 96%) 92%,
+    hsl(0deg 0% 98%) 100%
+  );
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.cylinder:before {
+  position: absolute;
+  margin-left: -1px;
+  margin-top: -5px;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 21px;
+  border-radius: 125px/25px;
+  border: 2px solid #d6d6d6;
+  background-image: linear-gradient(
+    90deg,
+    hsl(0deg 0% 98%) 0%,
+    hsl(344deg 0% 96%) 8%,
+    hsl(344deg 0% 95%) 17%,
+    hsl(0deg 0% 93%) 25%,
+    hsl(344deg 0% 94%) 33%,
+    hsl(344deg 0% 96%) 42%,
+    hsl(0deg 0% 98%) 50%,
+    hsl(344deg 0% 98%) 58%,
+    hsl(344deg 0% 97%) 67%,
+    hsl(0deg 0% 97%) 75%,
+    hsl(344deg 0% 95%) 83%,
+    hsl(344deg 0% 93%) 92%,
+    hsl(0deg 0% 92%) 100%
+  );
+  content: "";
+}
+
+.cylinder:after {
+  margin-left: -1px;
+  margin-bottom: -5px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  height: 21px;
+  border-radius: 125px/25px;
+  background: var(--bottom-color);
+  content: "";
+}
+
+.cylinder-content {
+  margin-bottom: -5px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  height: 0px;
+  padding-top: 10px;
+  border-radius: 125px/25px;
+  transition: 0.3s linear;
+}
+
+.cylinder-content:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 20px;
+  border-radius: 125px/25px;
+  border: var(--top-border);
+  background: var(--top-color);
+  content: "";
+}
+
+.cylinder-content:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  height: 20px;
+  border-radius: 125px/25px;
+  background-color: rgba(0, 160, 160, 0.4);
+  content: "";
+}
+
+.rectangle {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 6px;
+  width: 100px;
+  height: 300px;
+  border: 2px solid #d6d6d6;
+  background-image: linear-gradient(
+    90deg,
+    hsl(0deg 0% 92%) 0%,
+    hsl(344deg 0% 93%) 8%,
+    hsl(344deg 0% 95%) 17%,
+    hsl(0deg 0% 97%) 25%,
+    hsl(344deg 0% 97%) 33%,
+    hsl(344deg 0% 98%) 42%,
+    hsl(0deg 0% 98%) 50%,
+    hsl(344deg 0% 96%) 58%,
+    hsl(344deg 0% 94%) 67%,
+    hsl(0deg 0% 93%) 75%,
+    hsl(344deg 0% 95%) 83%,
+    hsl(344deg 0% 96%) 92%,
+    hsl(0deg 0% 98%) 100%
+  );
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.rectangle:after {
+  margin-left: -1px;
+  margin-bottom: -5px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  height: 7px;
+  content: "";
+}
+
+.rectangle-content {
+  margin-bottom: -5px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  height: 0px;
+  transition: 0.3s linear;
+}
+
+.circle {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 6px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #d6d6d6;
+  background-image: linear-gradient(
+    90deg,
+    hsl(0deg 0% 92%) 0%,
+    hsl(344deg 0% 93%) 8%,
+    hsl(344deg 0% 95%) 17%,
+    hsl(0deg 0% 97%) 25%,
+    hsl(344deg 0% 97%) 33%,
+    hsl(344deg 0% 98%) 42%,
+    hsl(0deg 0% 98%) 50%,
+    hsl(344deg 0% 96%) 58%,
+    hsl(344deg 0% 94%) 67%,
+    hsl(0deg 0% 93%) 75%,
+    hsl(344deg 0% 95%) 83%,
+    hsl(344deg 0% 96%) 92%,
+    hsl(0deg 0% 98%) 100%
+  );
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.circle::after {
+  position: absolute;
+  bottom: 0;
+  width: 300px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--bottom-color);
+  content: "";
+}
+
+.circle-content {
+  margin-bottom: -5px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  padding-top: 10px;
+  transition: 0.3s linear;
+}
+
+.cone {
+  width: 100px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cone-bottom-top,
+.cone-top-bottom {
+  height: 200px;
+  margin: 0 auto;
+  border: 2px solid #d6d6d6;
+  border-bottom: 0;
+  border-radius: 125px/25px;
+  background-image: linear-gradient(
+    90deg,
+    hsl(0deg 0% 92%) 0%,
+    hsl(344deg 0% 93%) 8%,
+    hsl(344deg 0% 95%) 17%,
+    hsl(0deg 0% 97%) 25%,
+    hsl(344deg 0% 97%) 33%,
+    hsl(344deg 0% 98%) 42%,
+    hsl(0deg 0% 98%) 50%,
+    hsl(344deg 0% 96%) 58%,
+    hsl(344deg 0% 94%) 67%,
+    hsl(0deg 0% 93%) 75%,
+    hsl(344deg 0% 95%) 83%,
+    hsl(344deg 0% 96%) 92%,
+    hsl(0deg 0% 98%) 100%
+  );
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.cone-bottom {
+  height: 100px;
+  clip-path: polygon(0 0, 100% 0, 50% 100%, 50% 100%);
+  overflow: hidden;
+  position: relative;
+  background-image: linear-gradient(
+    90deg,
+    hsl(0deg 0% 92%) 0%,
+    hsl(344deg 0% 93%) 8%,
+    hsl(344deg 0% 95%) 17%,
+    hsl(0deg 0% 97%) 25%,
+    hsl(344deg 0% 97%) 33%,
+    hsl(344deg 0% 98%) 42%,
+    hsl(0deg 0% 98%) 50%,
+    hsl(344deg 0% 96%) 58%,
+    hsl(344deg 0% 94%) 67%,
+    hsl(0deg 0% 93%) 75%,
+    hsl(344deg 0% 95%) 83%,
+    hsl(344deg 0% 96%) 92%,
+    hsl(0deg 0% 98%) 100%
+  );
+  margin-top: -8px;
+}
+
+.cone-content {
+  margin-bottom: -5px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-top: 10px;
+  width: 100px;
+}
+
+.cone-content-top {
+  margin-top: -16px;
+  transition: 0.3s linear;
+  border-bottom: 0;
+  border-radius: 125px/25px;
+}
+
+.cone-content-bottom {
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+}
+
+.top-cone {
+  height: 100px;
+  clip-path: polygon(50% 0%, 50% 0%, 100% 100%, 0% 100%);
+  overflow: hidden;
+  position: relative;
+  background-image: linear-gradient(
+    90deg,
+    hsl(0deg 0% 92%) 0%,
+    hsl(344deg 0% 93%) 8%,
+    hsl(344deg 0% 95%) 17%,
+    hsl(0deg 0% 97%) 25%,
+    hsl(344deg 0% 97%) 33%,
+    hsl(344deg 0% 98%) 42%,
+    hsl(0deg 0% 98%) 50%,
+    hsl(344deg 0% 96%) 58%,
+    hsl(344deg 0% 94%) 67%,
+    hsl(0deg 0% 93%) 75%,
+    hsl(344deg 0% 95%) 83%,
+    hsl(344deg 0% 96%) 92%,
+    hsl(0deg 0% 98%) 100%
+  );
+  margin-bottom: -8px;
+}
+.cone-content-top-bottom {
+  margin-top: -13px;
+  transition: 0.3s linear;
+  border-bottom: 0;
+  border-radius: 125px/25px;
+}
+
+.shape-info {
+  display: flex;
+  justify-content: center;
+}
+.scale-rect:not(:first-child) {
+  margin-top: 52px;
+}
+
+.scale-rect:first-child {
+  margin-top: -8px;
+}
+
+.scale-cyl:not(:first-child) {
+  margin-top: 49px;
+}
+
+.scale-cyl:first-child {
+  margin-top: -3px;
+}
+
+.scale-cir:not(:first-child) {
+  margin-top: 26px;
+}
+
+.scale-cir:first-child {
+  margin-top: -10px;
+}
+
+.scale-ct:not(:first-child) {
+  margin-top: 52px;
+}
+
+.scale-ct:first-child {
+  margin-top: -8px;
+}
+
+.scale-cb:not(:first-child) {
+  margin-top: 52px;
+}
+
+.scale-cb:first-child {
+  margin-top: -8px;
+}
+
+.caliberation {
+  height: 302px;
+}
+
+.caliberation-cir {
+  height: 192px;
+}
