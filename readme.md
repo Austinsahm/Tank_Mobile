@@ -1,4 +1,4 @@
-# Smart Home Greenskyui 
+# Smart Home Tank Mobile (Ionic) 
 This project was generated with ionic/angular 6.1 with angular 15.0.0, ts: 4.8.4 on port `localhost --port=8100` 
 
 ## Build server 
